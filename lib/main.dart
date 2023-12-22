@@ -110,6 +110,28 @@ class _MainAppState extends State<MainApp> {
               "Health balance",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
+            actions: [
+              Row(
+                children: [
+                  const Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Text(
+                      "Last week",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/double_arrow.png',
+                      color: Colors.white,
+                      height: 18,
+                      width: 18,
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
           body: Container(
             height: 100,
