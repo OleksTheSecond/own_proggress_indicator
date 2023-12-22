@@ -112,12 +112,29 @@ class _MainAppState extends State<MainApp> {
             ),
           ),
           body: Container(
-            height: 100,
             child: Card(
               child: Column(
                 children: [
                   _indicatorHistory(),
                   _progresIndicator(),
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          widget.bodyPercent += 2;
+                          widget.mindPercent -= 1;
+                          widget.spiritPercent -= 1;
+                        });
+                      },
+                      child: Text("Body percent +")),
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          widget.bodyPercent -= 2;
+                          widget.mindPercent += 1;
+                          widget.spiritPercent += 1;
+                        });
+                      },
+                      child: Text("Body percent -")),
                 ],
               ),
             ),
